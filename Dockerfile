@@ -24,7 +24,7 @@ RUN echo "updating key functionalities" && \
 RUN     apt-get update
 
 RUN echo "Installing vi" && \
-        apt-get install -y vim
+        apt-get install -y vim curl
 
 RUN echo "Installing Python" && \
         apt-get install -y python3 python3-pip &&\
