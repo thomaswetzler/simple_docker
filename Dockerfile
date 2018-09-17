@@ -12,8 +12,7 @@ LABEL maintainer="thomas.wetzler@t-systems.com"
 ENV ORG_NAME="T-Systems"
 
 # Install Packages
-RUN echo "updating key functionalities" && \
-	apt-get install -y python3-software-properties 
+RUN echo "updating key functionalities" 
 RUN apk add --no-cache curl && \
     echo "===> Installing Python3" && \
     apk add --no-cache python3 && \
