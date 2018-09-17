@@ -20,7 +20,7 @@ RUN apk add --no-cache curl && \
     rm -r /root/.cache
 
 # Install Flask
-RUN easy_install web.py
+RUN pip install web.py
 
 COPY files/* /home/ 
 RUN  chmod u+x /home/srver.*
@@ -28,5 +28,5 @@ RUN  chown 1000.1000 /home/*
 
 # Start Server
 WORKDIR /home/
-ENTRYPOINT /home/server.py
+#ENTRYPOINT /home/server.py
 
