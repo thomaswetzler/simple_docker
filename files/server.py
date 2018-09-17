@@ -4,7 +4,7 @@ from flask import (
 )
 
 # Create the application instance
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__, template_folder="/home")
 
 # Create a URL route in our application for "/"
 @app.route('/')
