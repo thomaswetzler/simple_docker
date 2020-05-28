@@ -1,0 +1,16 @@
+## simple-docker-pod.yml
+## Input File for K8S to create Docker Container 
+---
+apiVersion: v1
+kind: Pod
+metadata:
+    name: simple-pod
+    namespace: default
+spec:
+    containers:
+    -   name: simple-pod
+        image: 100.125.7.25:20202/training/simple:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        -   containerPort: 5000
+    restartPolicy: Always
